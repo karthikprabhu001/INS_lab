@@ -106,3 +106,22 @@ Decryption Algorithm:
 
 Feistel Cipher - A symmetric encryption algorithm that splits plaintext into two halves and processes them through multiple rounds using a round function, key, and XOR operations. It forms the basis of many modern block ciphers like DES
 
+Data Encryption Standard (DES)
+
+Input: Plaintext, Key
+
+Output: Ciphertext
+
+1. Apply Initial Permutation to the Plaintext.
+2. Divide the Plaintext into Left and Right halves.
+3. For 16 rounds:
+   a. Expand the Right half using Expansion Permutation.
+   b. XOR with the Key for the current round.
+   c. Substitute using S-boxes.
+   d. Permute the result using the P-box.
+   e. XOR the result with the Left half.
+   f. Swap Left and Right halves.
+4. Combine the halves and apply the Final Permutation.
+5. Return Ciphertext.
+
+
