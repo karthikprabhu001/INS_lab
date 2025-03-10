@@ -124,4 +124,20 @@ Output: Ciphertext
 4. Combine the halves and apply the Final Permutation.
 5. Return Ciphertext.
 
+RSA Algorithm
+
+Input: Plaintext, Public Key (e, n), Private Key (d, n)
+
+Output: Ciphertext and Decrypted Plaintext
+
+1. Convert Plaintext to numerical format.
+2. Encryption:
+   a. For each number in Plaintext:
+      i. Cipher = (number^e) mod n
+   b. Return Ciphertext.
+3. Decryption:
+   a. For each number in Ciphertext:
+      i. Plain = (Cipher^d) mod n
+   b. Return Decrypted Plaintext.
+
 
