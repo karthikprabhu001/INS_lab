@@ -124,7 +124,7 @@ Output: Ciphertext
 4. Combine the halves and apply the Final Permutation.
 5. Return Ciphertext.
 
-RSA Algorithm
+RSA Algorithm:
 
 Input: Plaintext, Public Key (e, n), Private Key (d, n)
 
@@ -140,4 +140,15 @@ Output: Ciphertext and Decrypted Plaintext
       i. Plain = (Cipher^d) mod n
    b. Return Decrypted Plaintext.
 
+Diffie-Hellman Algorithm:
 
+Input: Public Base (g), Public Modulus (p), Private Keys (a, b)
+
+Output: Shared Secret
+
+1. Alice computes A = (g^a) mod p and sends it to Bob.
+2. Bob computes B = (g^b) mod p and sends it to Alice.
+3. Both compute the shared secret:
+   a. Alice computes (B^a) mod p.
+   b. Bob computes (A^b) mod p.
+4. Verify that both results are the same.
